@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
     // other configurations...
 
@@ -7,10 +8,13 @@ module.exports = {
             {
                 test: /\.svg$/,
                 use: ['@svg/webpack'],
+                include: path.resolve(__dirname, 'src/images'),
             },
         ],
     },
-    resolve: 'gatsby-plugin-react-svg',
+    resolve: {
+        extensions: ['gatsby-plugin-react-svg', '.js', '.jsx', '.ts', '.tsx', '.svg'], // include svg in extensions
+    },
     options: {
         rule: {
             include: /svg/
