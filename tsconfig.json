@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+    "target": "es2016",
+    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",
+    /* Specify what module code is generated. */
+    /* Specify how TypeScript looks up a file from a given module specifier. */
+    "baseUrl": "src",
+    /* Specify the base directory to resolve non-relative module names. */
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,
+    /* Ensure that casing is correct in imports. */
+    /* Type Checking */
+    "strict": true,
+    /* Enable all strict type-checking options. */
+    /* Completeness */
+    "skipLibCheck": true,
+    /* Skip type checking all .d.ts files. */
+    "jsx": "react",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.json", "public/**/*.d.ts", "src/custom.d.ts", "src/declarations.d.ts"],
   "exclude": ["node_modules"]
 }
