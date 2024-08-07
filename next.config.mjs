@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import i18nextConfig from './next-i18next.config.js';
+
+const { i18n } = i18nextConfig;
+
+const nextConfig = {
+    i18n,
+};
 
 export default nextConfig;
