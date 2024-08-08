@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import {ReactComponent as Logo} from '../images/logo.svg';
 import {Typography} from '@mui/material';
-
+import target from '../images/target.jpg';
 export function MainPage(): React.ReactElement {
     return (
         <body>
@@ -19,15 +19,11 @@ export function MainPage(): React.ReactElement {
             </Box>
             <Box className='content'>
                 <Box className='section'>
-                    <Box className='sectionTitle'>About Us</Box>
-                    <Box className='sectionContent'>
-                        <Box className='sectionContentText'>
-                            <p>
-                            We are a group of students from the University of Washington who are passionate about
-                            technology and its applications in the real world. We are excited to work on this project
-                            and hope to make a positive impact on the world.
-                            </p>
-                        </Box>
+                    <Box className='section-left'>
+                        About us
+                    </Box>
+                    <Box className='section-right'>
+                        <img src={target} alt={''}/>
                     </Box>
                 </Box>
             </Box>

@@ -7,17 +7,22 @@ module.exports = {
             // other rules...
             {
                 test: /\.svg$/,
-                use: ['@svg/webpack'],
+                use: ['@svgr/webpack'], // Correct loader for SVG files
+                include: path.resolve(__dirname, 'src/images'),
+            },
+            {
+                test: /\.(jpg|jpeg|png|gif)$/, // Ensure other image types are handled
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                    },
+                },
                 include: path.resolve(__dirname, 'src/images'),
             },
         ],
     },
     resolve: {
-        extensions: ['gatsby-plugin-react-svg', '.js', '.jsx', '.ts', '.tsx', '.svg'], // include svg in extensions
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg'], // Correct order and extension inclusion
     },
-    options: {
-        rule: {
-            include: /svg/
-        }
-    }
 };
