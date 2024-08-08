@@ -2,4 +2,28 @@
     width: 100px;
     height: 100px;
     margin-right: auto;
+    background: transparent;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    box-shadow: none !important;
+    height: 100px;
+    transition: background-color 1.5s, height 1.5s;
+    z-index: 12;
+}
+
+.scrolled {
+    height: 64px !important;
+}
+
+.muiToolBarRoot .scrolled {
+    /*transition in the height*/
+
+    height: 64px !important;
+}
+
+.MuiSvgIcon-root {
+    fill: white !important;
 }
