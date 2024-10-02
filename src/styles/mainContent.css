@@ -27,7 +27,7 @@
     background-color: #f5f5f5;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../images/background_dark.jpg");
+    background-image: url("../images/background_tree.jpg");
     top: 0;
     min-height: 500px;
     opacity: 1;
@@ -51,7 +51,36 @@
 
 .section {
     min-height: 500px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure that items wrap to the next line */
+    width: 100%; /* Ensure each section takes full width */
 }
+
+.section-title, .section-description {
+    flex: 1 1 50%; /* Flex basis set to 50%, meaning each section will take half the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.section-title {
+    background-color: #818181;
+    color: white;
+}
+
+.section-description {
+    background-color: #f5f5f5;
+}
+
+/* Ensuring responsive design for smaller screens */
+@media (max-width: 768px) {
+    .section-title, .section-description {
+        flex: 1 1 100%; /* On small screens, each section will take the full width */
+        height: auto; /* Allow for dynamic height */
+    }
+}
+
 
 .title-container {
     display: flex;
@@ -61,8 +90,8 @@
     margin-bottom: 20px;
 
     .main-page-logo {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 250px;
         background: transparent;
     }
 }
@@ -85,5 +114,4 @@
     animation: fadeInUp 1s ease-out 1s;
     animation-fill-mode: forwards;
 }
-
 
