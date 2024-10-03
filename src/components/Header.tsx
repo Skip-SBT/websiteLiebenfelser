@@ -1,11 +1,11 @@
 import * as React from 'react';
+import {useEffect} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import {ReactComponent as Logo} from '../images/logo.svg';
-import {useEffect} from 'react';
+import logoColor from '../images/logo.png';
 
 export function Header(): React.ReactElement {
     // give header css class when scroll
@@ -23,7 +23,7 @@ export function Header(): React.ReactElement {
             }
 
             const opacity = scrollPosition / maxScroll;
-            header?.style.setProperty('background-color', `rgba(21, 21, 21, ${opacity})`);
+            header?.style.setProperty('background-color', `rgba(0, 0, 0, ${opacity})`);
             header?.classList.toggle('scrolled', scrollPosition > 40);
             muiToolBarRoot?.classList.toggle('scrolled', scrollPosition > 40);
             hamburger?.classList.toggle('scrolled', scrollPosition > 40);
@@ -47,7 +47,7 @@ export function Header(): React.ReactElement {
             <Box sx={{flexGrow: 1}}>
                 <AppBar position="static" color={'transparent'}>
                     <Toolbar>
-                        <Logo className={'logo'}/>
+                        <img src={logoColor} className='logo' alt=""/>
                         <IconButton
                             size="large"
                             edge="start"

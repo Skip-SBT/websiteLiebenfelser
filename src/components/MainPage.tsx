@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import {ReactComponent as Logo} from '../images/logo.svg';
 import {Typography} from '@mui/material';
+import {Footer} from './Footer';
 
 export function MainPage(): React.ReactElement {
     return (
@@ -53,6 +54,7 @@ export function MainPage(): React.ReactElement {
                     </Box>
                 </Box>
             </Box>
+            <Footer/>
         </body>
     );
 }

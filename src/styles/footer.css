@@ -1,0 +1,33 @@
+footer{
+    background-color: #818181;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+    color: white;
+
+    .input {
+        color: white !important;
+        border-color: white!important;
+    }
+}
+
+.info {
+    color: white !important;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+}
