@@ -25,9 +25,3 @@ footer{
     justify-content: space-evenly;
     padding: 20px;
 }
-
-a {
-    color: white !important;
-    text-decoration: none !important;
-    font-weight: bold;
-}
