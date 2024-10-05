@@ -1,4 +1,5 @@
 const path = require('path');
+
 module.exports = {
     // other configurations...
 
@@ -20,9 +21,18 @@ module.exports = {
                 },
                 include: path.resolve(__dirname, 'src/images'),
             },
+            {
+                test: /\.scss$/, // Handling SCSS files
+                use: [
+                    'style-loader', // Injects styles into DOM
+                    'css-loader',   // Turns CSS into CommonJS
+                    'sass-loader'   // Compiles Sass to CSS
+                ],
+                include: path.resolve(__dirname, 'src/styles'), // Change the path to where your SCSS files are located
+            },
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg'], // Correct order and extension inclusion
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg', '.scss'], // Added .scss to the extension list
     },
 };

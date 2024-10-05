@@ -1,0 +1,23 @@
+@import "variables";
+
+footer {
+  background-color: #818181;
+  padding: 0 $sideMargin;
+  flex-shrink: 0;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: $defaultPadding;
+  color: white;
+}
+
+.info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: $defaultPadding;
+}

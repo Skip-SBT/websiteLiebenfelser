@@ -1,4 +1,4 @@
-import 'styles/index.css';
+import 'styles/index.scss';
 import {Header} from './components/Header';
 import {MainPage} from './components/MainPage';
 import React from 'react';

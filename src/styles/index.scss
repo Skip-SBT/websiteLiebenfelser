@@ -1,0 +1,15 @@
+@import "header.scss";
+@import "mainContent.scss";
+@import "footer.scss";
+@import "subPage.scss";
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}

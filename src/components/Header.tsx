@@ -1,23 +1,26 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import logoColor from '../images/logo.png';
-import {AppDrawer} from './AppDrawer';
+import { AppDrawer } from './AppDrawer';
 
 export function Header(): React.ReactElement {
     let [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    let navigate = useNavigate();
 
     const MENU_ITEMS = [
         {text: 'Home', link: '/'},
-        {text: 'About', link: '/about'},
-        {text: 'Services', link: '/services'},
-        {text: 'Contact', link: '/contact'},
+        {text: 'About', link: '/#about'},
+        {text: 'Services', link: '/#services'},
+        {text: 'Contact', link: '/#contact'},
         {text: 'AGB', link: '/agb'}
     ];
+
     const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
         if (
             event.type === 'keydown' &&
@@ -68,7 +71,13 @@ export function Header(): React.ReactElement {
             <Box sx={{flexGrow: 1}}>
                 <AppBar position="static" color={'transparent'}>
                     <Toolbar>
-                        <img src={logoColor} className='logo' alt=""/>
+                        <img
+                            src={logoColor}
+                            className='logo'
+                            alt="Logo"
+                            onClick={() => navigate('/')}
+                            style={{ cursor: 'pointer' }}
+                        />
                         <IconButton
                             size="large"
                             edge="start"
@@ -77,7 +86,7 @@ export function Header(): React.ReactElement {
                             sx={{mr: 2}}
                             onClick={() => setIsDrawerOpen(true)}
                         >
-                            <MenuIcon/>
+                            <MenuIcon />
                         </IconButton>
                     </Toolbar>
                 </AppBar>

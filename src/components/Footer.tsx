@@ -44,8 +44,8 @@ export function Footer(): React.ReactElement {
             </Box>
             <Box className='info'>
                 <Typography>© 2024 Alle Rechte vorbehalten</Typography>
-                <Link href='https://www.liebenfelsergroup.com/impressum'>Impressum</Link>
-                <Link href='https://www.liebenfelsergroup.com/agb'>AGB</Link>
+                <Link href='/#impressum'>Impressum</Link>
+                <Link href='/agb'>AGB</Link>
             </Box>
         </footer>
     );
