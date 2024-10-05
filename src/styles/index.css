@@ -1,6 +1,8 @@
 @import "header.css";
 @import "mainContent.css";
 @import "footer.css";
+@import "subPage.css";
+@import "appDrawer.css";
 
 body, h1, h2, h3, h4, h5, h6, p, a, span, div {
     font-family: 'Georgia', Serif, serif !important;

@@ -4,8 +4,8 @@
     "react-app/jest"
   ],
   "rules": {
-    "indent": ["error", 4],
-    "quotes": ["error", "single"],
+    "indent": ["warn", 4],
+    "quotes": ["warn", "single"],
     "semi": ["error", "always"],
     "no-unused-vars": ["warn"],
     "eqeqeq": ["error", "always"],

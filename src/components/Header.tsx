@@ -1,13 +1,34 @@
 import * as React from 'react';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import logoColor from '../images/logo.png';
+import {AppDrawer} from './AppDrawer';
 
 export function Header(): React.ReactElement {
+    let [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const MENU_ITEMS = [
+        {text: 'Home', link: '/'},
+        {text: 'About', link: '/about'},
+        {text: 'Services', link: '/services'},
+        {text: 'Contact', link: '/contact'},
+        {text: 'AGB', link: '/agb'}
+    ];
+    const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+            event.type === 'keydown' &&
+            ((event as React.KeyboardEvent).key === 'Tab' ||
+                (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+            return;
+        }
+        setIsDrawerOpen(open);
+    };
+
     // give header css class when scroll
     useEffect(() => {
         const header = document.querySelector('header');
@@ -54,11 +75,17 @@ export function Header(): React.ReactElement {
                             color="inherit"
                             aria-label="menu"
                             sx={{mr: 2}}
+                            onClick={() => setIsDrawerOpen(true)}
                         >
                             <MenuIcon/>
                         </IconButton>
                     </Toolbar>
                 </AppBar>
+                <AppDrawer
+                    isOpen={isDrawerOpen}
+                    toggleDrawer={toggleDrawer}
+                    menuItems={MENU_ITEMS}
+                />
             </Box>
         </header>
     );
