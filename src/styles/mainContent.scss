@@ -115,3 +115,11 @@
     animation-fill-mode: forwards;
 }
 
+.scroll-down{
+    position: absolute;
+    bottom: 10px;
+    img {
+        width: 45px;
+        height: 40px;
+    }
+}
