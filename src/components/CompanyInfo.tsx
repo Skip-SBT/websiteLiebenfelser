@@ -26,7 +26,7 @@ export function CompanyInfo(): React.ReactElement {
                             drei Geschäftsfeldern:
                         <br/>
                             Consulting: Strategie Entwicklung und Implementierung
-                        <br/>
+                            <br/>
                             Familiy Office: Vermögensberatung<br/>
                             Immobilien: Entwicklung und Verkauf</Typography>
                     </Box>
