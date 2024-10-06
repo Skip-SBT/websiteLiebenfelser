@@ -7,7 +7,7 @@
     "indent": ["warn", 4],
     "quotes": ["warn", "single"],
     "semi": ["error", "always"],
-    "no-unused-vars": ["warn"],
+    "no-unused-vars": ["error"],
     "eqeqeq": ["error", "always"],
     "curly": ["error"],
     "camelcase": ["error"],
