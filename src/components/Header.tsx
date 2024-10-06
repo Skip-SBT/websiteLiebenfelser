@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import logoColor from '../images/logo.png';
-import { AppDrawer } from './AppDrawer';
+import {AppDrawer} from './AppDrawer';
 
 export function Header(): React.ReactElement {
     let [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -76,7 +76,7 @@ export function Header(): React.ReactElement {
                             className='logo'
                             alt="Logo"
                             onClick={() => navigate('/')}
-                            style={{ cursor: 'pointer' }}
+                            style={{cursor: 'pointer'}}
                         />
                         <IconButton
                             size="large"
@@ -86,7 +86,7 @@ export function Header(): React.ReactElement {
                             sx={{mr: 2}}
                             onClick={() => setIsDrawerOpen(true)}
                         >
-                            <MenuIcon />
+                            <MenuIcon/>
                         </IconButton>
                     </Toolbar>
                 </AppBar>
