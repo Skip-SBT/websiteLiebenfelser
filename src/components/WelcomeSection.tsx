@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import {Typography} from '@mui/material';
 import {ReactComponent as Logo} from '../images/logo.svg';
-
 import scrollDown from '../images/scrollDown.gif';
 
 export function WelcomeSection(): React.ReactElement {

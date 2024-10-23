@@ -49,15 +49,24 @@
     z-index: 3;
 }
 
+.content {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
 .section {
     min-height: 500px;
     display: flex;
-    flex-wrap: wrap; /* Ensure that items wrap to the next line */
-    width: 100%; /* Ensure each section takes full width */
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-direction: row;
 }
 
 .section-title, .section-description {
-    flex: 1 1 50%; /* Flex basis set to 50%, meaning each section will take half the width */
+    flex: 1 1 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,20 +76,55 @@
 .section-title {
     background-color: #818181;
     color: white;
+    text-align: center;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
 }
 
 .section-description {
     background-color: #f5f5f5;
+    text-align: center;
 }
 
-/* Ensuring responsive design for smaller screens */
 @media (max-width: 768px) {
+    .welcomeContent {
+        background-position: center;
+    }
+
+    .main-page-logo {
+        width: 80px;
+        display: none;
+    }
+
+    .title-container {
+        width: 90%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .scroll-down img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .description {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+
+
     .section-title, .section-description {
-        flex: 1 1 100%; /* On small screens, each section will take the full width */
-        height: auto; /* Allow for dynamic height */
+        flex: 1 1 100%;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .section-description {
+        text-align: center;
     }
 }
-
 
 .title-container {
     display: flex;
